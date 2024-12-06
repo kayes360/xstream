@@ -31,12 +31,17 @@ const LanguageSwitcher = () => {
 
 
 
-  const handleLanguageChange = lang => {
-    
+  const handleLanguageChange = (lang) => {
     setSelectedLanguage({...selectedLanguage, code: lang, language: lang === 'en' ? 'English' : 'Bangla'});
     setShowManu(false);
-    router.push(`/${lang}/videos`)
-  }
+  
+    // Set a cookie for the selected language
+    document.cookie = `lang=${lang}; path=/; max-age=31536000`; // Expires in 1 year
+  
+    router.push(`/${lang}/videos`);
+  };
+  
+  
 
   return (
     <div className="flex gap-4 items-center">

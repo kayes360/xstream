@@ -1,6 +1,6 @@
 import VideoCardList from "@/components/VideoCardList";
 import { getVideos } from "@/utills/getVideos"; 
-import { getDictionary } from "../dictionaries/dictionaries";
+import { getDictionary } from "@/app/[lang]/dictionaries/dictionaries";
 
 export default async function Home({params:{lang}}) {
     const videos = await getVideos(); 

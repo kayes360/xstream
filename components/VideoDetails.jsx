@@ -2,7 +2,7 @@ import { getVideos } from "@/utills/getVideos";
 import Image from "next/image";
 import React from "react";
 import SuggestedVideos from "./SuggestedVideos";
-import { notFound } from "next/navigation"; 
+import { notFound } from "next/navigation";  
 
 export default async function VideoDetails({ id, dict }) {
   const videos = await getVideos();
@@ -15,7 +15,7 @@ export default async function VideoDetails({ id, dict }) {
 
   return (
     <>
-      <div className="lg:w-3/4">
+      <div className="lg:w-3/4"> 
         <div className="relative">
           <iframe
             src={`https://www.youtube.com/embed/${singleVideo?.videoId}`}
