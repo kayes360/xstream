@@ -32,15 +32,17 @@ const LanguageSwitcher = () => {
 
 
   const handleLanguageChange = (lang) => {
-    setSelectedLanguage({...selectedLanguage, code: lang, language: lang === 'en' ? 'English' : 'Bangla'});
-    setShowManu(false);
-  
-    // Set a cookie for the selected language
-    document.cookie = `lang=${lang}; path=/; max-age=31536000`; // Expires in 1 year
+    setSelectedLanguage({
+      ...selectedLanguage,
+      code: lang,
+      language: lang === 'en' ? 'English' : 'Bangla',
+    });
+    setShowManu(false); 
+    // Save selected language to localStorage
+    localStorage.setItem("lang", lang);
   
     router.push(`/${lang}/videos`);
   };
-  
   
 
   return (
