@@ -23,7 +23,7 @@ export default async function Home({params:{lang}}) {
         </div>
         <div className="lg:col-span-2">
           <div className="relative rounded-lg overflow-hidden">
-            {/* <iframe
+            <iframe
               src="https://www.youtube.com/embed/0VtVPk7Zv9c"
               title="YouTube video player"
               frameBorder="0"
@@ -31,7 +31,7 @@ export default async function Home({params:{lang}}) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-            ></iframe> */}
+            ></iframe>
 
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4">
               <div className="text-right">
